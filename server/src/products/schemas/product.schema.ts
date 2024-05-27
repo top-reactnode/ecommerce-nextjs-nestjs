@@ -25,6 +25,15 @@ export class Review {
 }
 
 @Schema({ timestamps: true })
+export class Collection {
+  @Prop({ required: true })
+  name: string;
+
+  @Prop({ required: true })
+  products: Product[];
+}
+
+@Schema({ timestamps: true })
 export class Product {
   @Prop({ required: true })
   name: string;
